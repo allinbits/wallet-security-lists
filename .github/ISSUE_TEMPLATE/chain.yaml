@@ -24,7 +24,7 @@ body:
       label: Threat level
       description: What do you consider this chain's threat-level to be
       options: 
-        - 1 (Low) A warning should be displayed wqhen interacting
+        - 1 (Low) A warning should be displayed when interacting
         - 2 (Medium) Chain must be explicitly enabled in settings before interacting
         - 3 (High) Chain should not be allowed under any circumstances
     validations:
