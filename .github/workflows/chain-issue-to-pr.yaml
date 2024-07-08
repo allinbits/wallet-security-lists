@@ -1,0 +1,18 @@
+name: Chain add issue
+on:
+  issues:
+    types:
+      - opened
+jobs:
+  issue_to_pr:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - run: echo "$GITHUB_CONTEXT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
