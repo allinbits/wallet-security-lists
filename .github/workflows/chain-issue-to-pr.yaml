@@ -10,9 +10,14 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - run: echo "$GITHUB_CONTEXT"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-          NUMBER: ${{ github.event.issue.number }}
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+    - run: node index.js
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_REPO: ${{ github.repository }}
+        NUMBER: ${{ github.event.issue.number }}
+        GITHUB_CONTEXT: ${{ toJson(github) }}
