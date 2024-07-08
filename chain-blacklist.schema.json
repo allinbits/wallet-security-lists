@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/chain-blacklist.schema.json",
+  "title": "Chains List",
+  "description": "A list of blacklisted chains",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "chainId": {
+          "type": "string"
+        },
+        "submissionDate": {
+          "type": "string"
+        },
+        "userNotes": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "userName": {
+                  "type": "string"
+                },
+                "userNote": {
+                  "type": "string"
+                },
+                "noteDate": {
+                  "type": "string"
+                }
+              },
+              "required": ["userName", "userNote", "noteDate"]
+            }
+          ]
+        },
+        "threatLevel": {
+          "type": "integer"
+        }
+      },
+      "required": ["chainId", "submissionDate", "userNotes", "threatLevel"]
+    }
+  ]
+}

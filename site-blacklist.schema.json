@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/site-blacklist.schema.json",
+    "title": "URL List",
+    "description": "A list of blacklisted URLs",
+    "type": "array",
+    "items": [
+      {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "submissionDate": {
+            "type": "string"
+          },
+          "userNotes": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "userName": {
+                    "type": "string"
+                  },
+                  "userNote": {
+                    "type": "string"
+                  },
+                  "noteDate": {
+                    "type": "string"
+                  }
+                },
+                "required": ["userName", "userNote", "noteDate"]
+              }
+            ]
+          },
+          "threatLevel": {
+            "type": "integer"
+          }
+        },
+        "required": ["url", "submissionDate", "userNotes", "threatLevel"]
+      }
+    ]
+  }
+  

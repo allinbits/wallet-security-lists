@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/asset-blacklist.schema.json",
+  "title": "Asset List",
+  "description": "A list of blacklisted assets",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "base_denom": {
+          "type": "string"
+        },
+        "denoms": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "denom": {
+                  "type": "string"
+                },
+                "chainId": {
+                  "type": "string"
+                }
+              },
+              "required": ["denom", "chainId"]
+            }
+          ]
+        },
+        "submissionDate": {
+          "type": "string"
+        },
+        "userNotes": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "userName": {
+                  "type": "string"
+                },
+                "userNote": {
+                  "type": "string"
+                },
+                "noteDate": {
+                  "type": "string"
+                }
+              },
+              "required": ["userName", "userNote", "noteDate"]
+            }
+          ]
+        },
+        "threatLevel": {
+          "type": "integer"
+        }
+      },
+      "required": ["base_denom", "submissionDate", "userNotes", "threatLevel"]
+    }
+  ]
+}
