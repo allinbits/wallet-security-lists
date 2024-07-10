@@ -26,6 +26,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v6
       with:
+        branch: chore/auto/issue-to-pr/${{github.event.issue.number}}
         commit-message: |
             Automated commit: ${{github.event.issue.title}}
 
