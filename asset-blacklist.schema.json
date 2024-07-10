@@ -8,25 +8,11 @@
     {
       "type": "object",
       "properties": {
-        "base_denom": {
+        "baseDenom": {
           "type": "string"
         },
-        "denoms": {
-          "type": "array",
-          "items": [
-            {
-              "type": "object",
-              "properties": {
-                "denom": {
-                  "type": "string"
-                },
-                "chainId": {
-                  "type": "string"
-                }
-              },
-              "required": ["denom", "chainId"]
-            }
-          ]
+        "chainId": {
+          "type": "string"
         },
         "submissionDate": {
           "type": "string"
@@ -55,7 +41,7 @@
           "type": "integer"
         }
       },
-      "required": ["base_denom", "submissionDate", "userNotes", "threatLevel"]
+      "required": ["baseDenom", "submissionDate", "userNotes", "threatLevel"]
     }
   ]
 }

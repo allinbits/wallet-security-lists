@@ -1,4 +1,4 @@
-name: Chain add issue
+name: Issue-to-PR
 on:
   issues:
     types:
