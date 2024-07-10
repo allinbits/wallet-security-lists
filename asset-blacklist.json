@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "baseDenom": "uatom",
+    "chainId": "cosmoshub-4",
+    "submissionDate": "2024-07-10T06:52:48Z",
+    "threatLevel": "3",
+    "userNotes": [
+      {
+        "userName": "clockworkgr",
+        "userNote": "Testing",
+        "noteDate": "2024-07-10T06:52:48Z"
+      }
+    ]
+  }
+]
