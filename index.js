@@ -38,8 +38,8 @@ const addChainPR = (fields) => {
 const addAssetPR = (fields) => {
   const baseDenom = fields[0].split("\n\n")[1].toLowerCase();
   const chainId = fields[1].split("\n\n")[1].toLowerCase();
-  const note = fields[1].split("\n\n").slice(1, -1).join("\r\n");
-  const threatLevel = fields[2].split("\n\n")[1][0];
+  const note = fields[2].split("\n\n").slice(1, -1).join("\r\n");
+  const threatLevel = fields[3].split("\n\n")[1][0];
   const blacklist = JSON.parse(fs.readFileSync("asset-blacklist.json", "utf8"));
   const denom_index = blacklist.find(
     (x) => x.baseDenom == denom && x.chainId == chainId
