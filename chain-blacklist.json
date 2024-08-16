@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "chainId": "fakeosmo-1",
+    "submissionDate": "2024-08-16T11:08:48Z",
+    "threatLevel": "2",
+    "userNotes": [
+      {
+        "userName": "clockworkgr",
+        "userNote": "Impersonates osmosis",
+        "noteDate": "2024-08-16T11:08:48Z"
+      }
+    ]
+  }
+]
