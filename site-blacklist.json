@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "www.phishing-url.com/",
+    "submissionDate": "2025-02-24T14:39:13Z",
+    "threatLevel": "2",
+    "userNotes": [
+      {
+        "userName": "clockworkgr",
+        "userNote": "Phishing",
+        "noteDate": "2025-02-24T14:39:13Z"
+      }
+    ]
+  }
+]
